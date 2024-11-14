@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LoginPage from './components/LoginPage';
@@ -8,7 +8,18 @@ import CreateQuotePage from './components/CreateQuotePage';
 function App() {
     const [token, setToken] = useState(null);
 
-    const logout = () => setToken(null);
+    const logout = () => {
+        localStorage.removeItem('token')
+        setToken(null)
+    };
+
+
+    useEffect(()=>{
+        const token = localStorage.getItem('token')
+        if(token){
+            setToken(token)        
+        }
+    },[])
 
     return (
         <Router>
@@ -17,6 +28,7 @@ function App() {
             {!token && <Route path="/" element={<LoginPage setToken={setToken} />} />}
                 {token ? (
                     <>
+                        <Route path="/" element={<Navigate to="/quotes" />} />
                         <Route path="/quotes" element={<QuoteListPage token={token} />} />
                         <Route path="/create-quote" element={<CreateQuotePage token={token} />} />
                     </>

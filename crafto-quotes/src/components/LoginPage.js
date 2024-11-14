@@ -10,6 +10,7 @@ function LoginPage({ setToken }) {
         try {
             const data = await login(username, otp);
             setToken(data.token);
+            localStorage.setItem('token',data.token)
         } catch (error) {
             alert('Login failed');
         }
