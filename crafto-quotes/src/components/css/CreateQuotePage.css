@@ -1,5 +1,11 @@
 /* CreateQuotePage.css */
-
+.main-quote-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
 .create-quote-container {
     max-width: 600px;
     margin: 0 auto;

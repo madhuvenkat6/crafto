@@ -4,9 +4,9 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 98vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #333;
     padding: 15px;
@@ -17,9 +17,10 @@ nav {
 nav a,
 nav button {
     color: white;
+    width: 100px;
     text-decoration: none;
     padding: 10px 15px;
-    margin: 0 10px;
+    margin:0 10px;
     font-size: 16px;
     border: none;
     background: none;
@@ -49,16 +50,11 @@ body {
     padding-top: 60px; /* Space for fixed navbar */
 }
 
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-
+@media (max-width: 600px) {   
     nav a,
     nav button {
-        margin: 5px 0;
-        width: 100%;
+        margin: 5px 0;     
+      width:auto;
         text-align: center;
     }
 }

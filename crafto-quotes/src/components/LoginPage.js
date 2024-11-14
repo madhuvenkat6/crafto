@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { login } from '../api/api';
-import './../App.css';
+import './css/LoginPage.css';
 
 function LoginPage({ setToken }) {
     const [username, setUsername] = useState('');
@@ -17,6 +17,7 @@ function LoginPage({ setToken }) {
     };
 
     return (
+        <div className='main-container'>
         <div className="login-container">
             <h2>Login</h2>
             <input
@@ -32,6 +33,7 @@ function LoginPage({ setToken }) {
                 onChange={(e) => setOtp(e.target.value)}
             />
             <button onClick={handleLogin}>Login</button>
+        </div>
         </div>
     );
 }

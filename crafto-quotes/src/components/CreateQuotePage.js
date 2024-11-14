@@ -18,6 +18,7 @@ function CreateQuotePage({ token }) {
     };
 
     return (
+        <div className='main-quote-container'>
         <div className="create-quote-container">
             <h2>Create Quote</h2>
             <textarea
@@ -34,6 +35,7 @@ function CreateQuotePage({ token }) {
             <button className="create-quote-button" onClick={handleQuoteCreation}>
                 Create Quote
             </button>
+        </div>
         </div>
     );
 }
