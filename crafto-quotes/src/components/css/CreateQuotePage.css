@@ -1,0 +1,62 @@
+/* CreateQuotePage.css */
+
+.create-quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+}
+
+.create-quote-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.create-quote-textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.create-quote-file-input {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.create-quote-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-quote-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .create-quote-container {
+        padding: 15px;
+    }
+
+    .create-quote-textarea {
+        font-size: 14px;
+    }
+
+    .create-quote-button {
+        font-size: 14px;
+    }
+}

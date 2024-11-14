@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { login } from '../api/api';
+import './../App.css';
 
 function LoginPage({ setToken }) {
     const [username, setUsername] = useState('');
@@ -8,14 +9,14 @@ function LoginPage({ setToken }) {
     const handleLogin = async () => {
         try {
             const data = await login(username, otp);
-            setToken(data.token);  // Assuming API returns token in response
+            setToken(data.token);
         } catch (error) {
             alert('Login failed');
         }
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
             <input
                 type="text"

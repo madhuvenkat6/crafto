@@ -14,7 +14,7 @@ function App() {
         <Router>
             <Navbar token={token} logout={logout} />
             <Routes>
-                <Route path="/" element={<LoginPage setToken={setToken} />} />
+            {!token && <Route path="/" element={<LoginPage setToken={setToken} />} />}
                 {token ? (
                     <>
                         <Route path="/quotes" element={<QuoteListPage token={token} />} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { uploadMedia, createQuote } from '../api/api';
+import './css/CreateQuotePage.css';
 
 function CreateQuotePage({ token }) {
     const [text, setText] = useState('');
@@ -17,18 +18,22 @@ function CreateQuotePage({ token }) {
     };
 
     return (
-        <div>
+        <div className="create-quote-container">
             <h2>Create Quote</h2>
             <textarea
+                className="create-quote-textarea"
                 placeholder="Enter quote text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
             />
             <input
                 type="file"
+                className="create-quote-file-input"
                 onChange={(e) => setFile(e.target.files[0])}
             />
-            <button onClick={handleQuoteCreation}>Create Quote</button>
+            <button className="create-quote-button" onClick={handleQuoteCreation}>
+                Create Quote
+            </button>
         </div>
     );
 }

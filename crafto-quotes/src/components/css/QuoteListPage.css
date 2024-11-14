@@ -1,0 +1,87 @@
+/* QuoteListPage.css */
+
+.quote-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quote-list-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.quote-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.quote-item:hover {
+    transform: scale(1.02);
+}
+
+.quote-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.quote-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+.load-more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .quote-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quote-item img {
+        width: 100%;
+        height: auto;
+        margin: 0 0 10px;
+    }
+
+    .quote-text, .quote-meta {
+        text-align: left;
+    }
+}
