@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import LoginPage from './components/LoginPage';
 import QuoteListPage from './components/QuoteListPage';
 import CreateQuotePage from './components/CreateQuotePage';
+import './App.css';
+
 
 function App() {
     const [token, setToken] = useState(null);
