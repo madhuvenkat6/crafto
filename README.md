@@ -11,7 +11,7 @@ git clone https://github.com/your-username/quotes-app.git
 
 ### 2.Install dependencies:
 ```bash
-cd quotes-app
+cd crafto-quotes
 npm install
 ```
 
